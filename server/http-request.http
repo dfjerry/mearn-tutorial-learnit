@@ -1,0 +1,48 @@
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+ "username": "tuan",
+  "password": "tuan"
+}
+
+###
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+"username": "tuan",
+  "password": "tuan"
+}
+
+###
+POST http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDZhOTU3ZTk0MzU5NDQ4Yzg3YzkzYmEiLCJpYXQiOjE2MTkyNDA0NDJ9.8hS7XBo1Sof-tFDw-lcAcwp9gkQj3Pqm8nmoxilxk2Q
+{
+  "title": "my frist post",
+ "description": "toan",
+  "url": "google.com",
+  "status": "LEARNING"
+}
+
+###
+GET http://localhost:5000/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDZhOTU3ZTk0MzU5NDQ4Yzg3YzkzYmEiLCJpYXQiOjE2MTc3MDE1MDl9.kCfa_mftu7FQanJGDmzLgEdP8G-Gyj_k0nPQDCH4P3c
+
+###
+PUT http://localhost:5000/api/posts/606c26a1ddc37a2c5448c37b
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDZhOTU3ZTk0MzU5NDQ4Yzg3YzkzYmEiLCJpYXQiOjE2MTc3MDE1MDl9.kCfa_mftu7FQanJGDmzLgEdP8G-Gyj_k0nPQDCH4P3c
+
+{
+"title": "update title",
+  "description": "update desc",
+  "url": "facebook.com",
+  "status": "LEARNING"
+}
+###
+DELETE http://localhost:5000/api/posts/606c26a1ddc37a2c5448c37b
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDZhOTU3ZTk0MzU5NDQ4Yzg3YzkzYmEiLCJpYXQiOjE2MTc3MDE1MDl9.kCfa_mftu7FQanJGDmzLgEdP8G-Gyj_k0nPQDCH4P3c
+
