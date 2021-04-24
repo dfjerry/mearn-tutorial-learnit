@@ -1,7 +1,7 @@
 import {useContext, useEffect} from "react";
 import {PostContext} from "../../contexts/PostContext";
 import {AuthContext} from "../../contexts/AuthContext";
-import {Button, Card, Col, Row, Spinner, Toast} from "react-bootstrap";
+import {Button, Card, Col, Row, Spinner, Toast, OverlayTrigger, Tooltip} from "react-bootstrap";
 import SinglePost from "../posts/SinglePost";
 import AddPostModal from "../posts/AddPostModal";
 import addIcon from '../../assets/plus-circle-fill.svg'
@@ -58,9 +58,11 @@ const Dashboard = () => {
                     ))}
                 </Row>
                 {/*Open add post modal*/}
-                <Button className="btn-floating" onClick={setShowAddPostModal.bind(this, true)}>
-                    <img src={addIcon} alt="add-post" width='60' height='60'/>
-                </Button>
+                <OverlayTrigger placement='left' overlay={<Tooltip>Add a new thing to learn</Tooltip>}>
+                    <Button className="btn-floating" onClick={setShowAddPostModal.bind(this, true)}>
+                        <img src={addIcon} alt="add-post" width='60' height='60'/>
+                    </Button>
+                </OverlayTrigger>
             </>
         )
     }

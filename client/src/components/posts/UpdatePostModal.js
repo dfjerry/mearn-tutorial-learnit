@@ -28,7 +28,7 @@ const UpdatePostModal = () => {
         setShowToast({show: true, message, type: success ? 'success' : 'danger'})
     }
     return (
-        <Modal show={showUpdatePostModal} animation={false} onHide={closeDialog} >
+        <Modal show={showUpdatePostModal} onHide={closeDialog} >
             <Modal.Header closeButton>
                 <Modal.Title>
                     Making progress

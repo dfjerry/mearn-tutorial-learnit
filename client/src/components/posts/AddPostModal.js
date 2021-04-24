@@ -29,7 +29,7 @@ const AddPostModal = () => {
         setShowAddPostModal(false)
     }
     return (
-        <Modal show={showAddPostModal} animation={false} onHide={closeDialog}>
+        <Modal show={showAddPostModal}  onHide={closeDialog}>
             <Modal.Header closeButton>
                 <Modal.Title>
                     What do you want to learn?
